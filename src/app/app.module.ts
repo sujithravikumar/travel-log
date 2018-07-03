@@ -1,16 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
+import { VisitedStatesMapComponent } from './VisitedStatesMap/visited-states-map.component';
+import { FormsModule }   from '@angular/forms';
+import { GoogleGeoChartService } from './Services/google-geo-chart.service';
+import { GeoChartComponent } from './Charts/geochart.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VisitedStatesMapComponent,
+    GeoChartComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [GoogleGeoChartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
