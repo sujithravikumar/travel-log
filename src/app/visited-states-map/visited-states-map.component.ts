@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { GeoChartConfig } from '../Models/GeoChartConfig';
-import { ColorAxis } from '../Models/GeoChartConfig';
+import { GeoChartConfig } from '../models/geo-chart-config';
+import { ColorAxis } from '../models/geo-chart-config';
 
 @Component({
   selector: 'visited-states-map',

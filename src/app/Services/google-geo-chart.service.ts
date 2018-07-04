@@ -1,6 +1,6 @@
 import { GoogleChartsBaseService } from './google-charts.base.service';
 import { Injectable } from '@angular/core';
-import { GeoChartConfig } from '../Models/GeoChartConfig';
+import { GeoChartConfig } from '../models/geo-chart-config';
 
 declare var google: any;
 
