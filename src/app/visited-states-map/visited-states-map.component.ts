@@ -73,7 +73,7 @@ export class VisitedStatesMapComponent implements OnInit {
       [{v: 'US-WY', f: 'Wyoming'}, 0, '']
     ];
 
-    this.colorAxis = new ColorAxis(['#d1d3cd', '#009842', 'blue'], 0, 2);
+    this.colorAxis = new ColorAxis(['#d1d3cd', '#009842', '#2c00db'], 0, 2);
 
     this.config = new GeoChartConfig('regions', 'provinces', this.colorAxis, 'US', 'none');
     this.elementId = 'statesVisitedMap';
