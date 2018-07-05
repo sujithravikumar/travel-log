@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { GoogleGeoChartService } from '../services/google-geo-chart.service';
+import { GoogleGeoChartService } from '../_services/google-geo-chart.service';
 import { GeoChartConfig } from '../models/geo-chart-config';
 
 declare var google: any;
