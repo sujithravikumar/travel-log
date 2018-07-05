@@ -7,7 +7,7 @@ declare var google: any;
 
 
 @Component({
-  selector: 'geo-chart',
+  selector: 'app-geo-chart',
   templateUrl: './geo-chart.component.html'
 })
 export class GeoChartComponent implements OnInit {
@@ -19,6 +19,6 @@ export class GeoChartComponent implements OnInit {
     constructor(private _geoChartService: GoogleGeoChartService) {}
 
     ngOnInit(): void {
-        this._geoChartService.BuildGeoChart(this.elementId, this.data, this.config); 
+        this._geoChartService.BuildGeoChart(this.elementId, this.data, this.config);
     }
 }

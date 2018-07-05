@@ -1,20 +1,19 @@
-declare var google: any;
+declare const google: any;
 
 export class GoogleChartsBaseService {
-  constructor() { 
+  constructor() {
     google.charts.load('current', {
-      'packages':['geochart'],
+      'packages': ['geochart'],
       'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
     });
   }
 
-  protected buildChart(data: any[], chartFunc: any, options: any) : void {
-    var func = (chartFunc, options) => {
-      var datatable = google.visualization.arrayToDataTable(data);
-      chartFunc().draw(datatable, options);
+  protected buildChart(data: any[], chartFunc: any, options: any): void {
+    const func = (_chartFunc, _options) => {
+      const datatable = google.visualization.arrayToDataTable(data);
+      _chartFunc().draw(datatable, _options);
     };
-    var callback = () => func(chartFunc, options);
+    const callback = () => func(chartFunc, options);
     google.charts.setOnLoadCallback(callback);
   }
-  
 }
