@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GeoChartConfig } from '../models/geo-chart-config';
+import { GeoChartConfig, ToolTip } from '../models/geo-chart-config';
 import { ColorAxis } from '../models/geo-chart-config';
 
 @Component({
@@ -8,10 +8,11 @@ import { ColorAxis } from '../models/geo-chart-config';
   styleUrls: ['./visited-states-map.component.css']
 })
 export class VisitedStatesMapComponent implements OnInit {
-  title = 'Visited States Map';
+  title = 'States Visited & Lived Map';
 
   data: any[];
   colorAxis: ColorAxis;
+  tooltip: ToolTip;
   config: GeoChartConfig;
   elementId: String;
 
@@ -19,10 +20,10 @@ export class VisitedStatesMapComponent implements OnInit {
 
     // Geochart1 Data & Config
     this.data = [
-      ['State', 'Value', {role: 'tooltip'}],
+      ['State', 'Value', {'role': 'tooltip', 'p': {'html': true}}],
       [{v: 'US-AL', f: 'Alabama'}, 0, ''],
       [{v: 'US-AK', f: 'Alaska'}, 0, ''],
-      [{v: 'US-AZ', f: 'Arizona'}, 2, 'Lived'],
+      [{v: 'US-AZ', f: 'Arizona'}, 2, '<div>Lived</div>'],
       [{v: 'US-AR', f: 'Arkansas'}, 0, ''],
       [{v: 'US-CA', f: 'California'}, 1, 'Visited'],
       [{v: 'US-CO', f: 'Colorado'}, 1, 'Visited'],
@@ -57,7 +58,7 @@ export class VisitedStatesMapComponent implements OnInit {
       [{v: 'US-ND', f: 'North Dakota'}, 0, ''],
       [{v: 'US-OH', f: 'Ohio'}, 0, ''],
       [{v: 'US-OK', f: 'Oklahoma'}, 0, ''],
-      [{v: 'US-OR', f: 'Oregon'}, 2, 'Lived'],
+      [{v: 'US-OR', f: 'Oregon'}, 2, '<i>Lived</i>'],
       [{v: 'US-PA', f: 'Pennsylvania'}, 1, 'Visited'],
       [{v: 'US-RI', f: 'Rhode Island'}, 0, ''],
       [{v: 'US-SC', f: 'South Carolina'}, 0, ''],
@@ -73,10 +74,10 @@ export class VisitedStatesMapComponent implements OnInit {
       [{v: 'US-WY', f: 'Wyoming'}, 0, '']
     ];
 
-    this.colorAxis = new ColorAxis(['#d1d3cd', '#009842', '#2c00db'], 0, 2);
-
-    this.config = new GeoChartConfig('regions', 'provinces', this.colorAxis, 'US', 'none');
-    this.elementId = 'statesVisitedMap';
+    this.colorAxis = new ColorAxis(['lightgray', 'forestgreen', 'mediumblue'], 0, 2);
+    this.tooltip = new ToolTip(true);
+    this.config = new GeoChartConfig('regions', 'provinces', this.colorAxis, 'US', 'none', this.tooltip);
+    this.elementId = 'statesVisitedLivedMap';
   }
 
 }

@@ -1,7 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Alegreya');
 
-#statesVisitedMap path {
+#statesVisitedLivedMap path {
     stroke-width: 1;
     stroke: white;
+    cursor: pointer;
+}
+
+div.google-visualization-tooltip {
+    opacity: 0.9;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
 }

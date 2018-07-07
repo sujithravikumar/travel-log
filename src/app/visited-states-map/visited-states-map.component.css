@@ -1,12 +1,22 @@
-h1 {
+#title {
     color: #002868;
     font-family: 'Libre Baskerville', serif;
     font-size: 40px;
+    text-align: center;
 }
-.message {
+.summary {
     font-family: 'Alegreya', serif;
     font-size: 30px;
 }
+.visited {
+    color: forestgreen;
+}
+.lived {
+    color: mediumblue;
+}
 .number {
     font-size: 80px;
+    display: inline-block;
+    line-height: 35px;
+    height: 55px;
 }

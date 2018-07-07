@@ -1,6 +1,6 @@
 import { GoogleChartsBaseService } from './google-charts.base.service';
 import { Injectable } from '@angular/core';
-import { GeoChartConfig } from '../models/geo-chart-config';
+import { GeoChartConfig, ToolTip } from '../models/geo-chart-config';
 
 declare const google: any;
 
@@ -16,7 +16,8 @@ export class GoogleGeoChartService extends GoogleChartsBaseService {
             resolution: config.resolution,
             colorAxis: config.colorAxis,
             region: config.region,
-            legend: config.legend
+            legend: config.legend,
+            tooltip: config.tooltip
       };
 
     this.buildChart(data, chartFunc, options);
