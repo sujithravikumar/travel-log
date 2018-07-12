@@ -1,12 +1,12 @@
-#title {
+.title {
     color: #002868;
     font-family: 'Libre Baskerville', serif;
-    font-size: 40px;
+    font-size: 2.8vw;
     text-align: center;
 }
 .summary {
     font-family: 'Alegreya', serif;
-    font-size: 30px;
+    font-size: 2vw;
 }
 .visited {
     color: forestgreen;
@@ -15,8 +15,12 @@
     color: mediumblue;
 }
 .number {
-    font-size: 80px;
+    font-size: 6vw;
     display: inline-block;
     line-height: 35px;
     height: 55px;
+}
+.chart-wrap {
+    width: 55vw;
+    margin: 0 auto;
 }
