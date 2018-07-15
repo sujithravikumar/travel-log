@@ -1,7 +1,7 @@
 .title {
     color: #002868;
     font-family: 'Libre Baskerville', serif;
-    font-size: 2.8vw;
+    font-size: 2.5vw;
     text-align: center;
 }
 .summary {
@@ -17,7 +17,7 @@
 .number {
     font-size: 6vw;
     display: inline-block;
-    line-height: 35px;
+    line-height: 50px;
     height: 55px;
 }
 .chart-wrap {

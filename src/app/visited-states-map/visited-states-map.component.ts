@@ -9,6 +9,10 @@ import { ColorAxis } from '../models/geo-chart-config';
 })
 export class VisitedStatesMapComponent implements OnInit {
   title = 'States Visited & Lived Map';
+  visitedStatesCount = 0;
+  livedStatesCount = 0;
+  visitedDC = false;
+  livedInDC = false;
 
   data: any[];
   colorAxis: ColorAxis;
@@ -74,6 +78,10 @@ export class VisitedStatesMapComponent implements OnInit {
       [{v: 'US-WY', f: 'Wyoming'}, 0, '']
     ];
 
+    this.visitedStatesCount = this.data.filter(x => x[0].v !== 'US-DC' && (x[1] === 1 || x[1] === 2)).length;
+    this.livedStatesCount = this.data.filter(x => x[0].v !== 'US-DC' && x[1] === 2).length;
+    this.visitedDC = (this.data.filter(x => x[0].v === 'US-DC' && x[1] === 1).length === 1) ? true : false;
+    this.livedInDC = (this.data.filter(x => x[0].v === 'US-DC' && x[1] === 2).length === 1) ? true : false;
     this.colorAxis = new ColorAxis(['lightgray', 'forestgreen', 'mediumblue'], 0, 2);
     this.tooltip = new ToolTip(true);
     this.config = new GeoChartConfig('regions', 'provinces', this.colorAxis, 'US', 'none', this.tooltip);
