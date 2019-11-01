@@ -72,7 +72,7 @@ export class VisitedStatesMapComponent implements OnInit {
       [{v: 'US-UT', f: 'Utah'}, 0, ''],
       [{v: 'US-VT', f: 'Vermont'}, 0, ''],
       [{v: 'US-VA', f: 'Virginia'}, 0, ''],
-      [{v: 'US-WA', f: 'Washington'}, 1, 'Visited'],
+      [{v: 'US-WA', f: 'Washington'}, 2, 'Lived'],
       [{v: 'US-WV', f: 'West Virginia'}, 0, ''],
       [{v: 'US-WI', f: 'Wisconsin'}, 0, ''],
       [{v: 'US-WY', f: 'Wyoming'}, 0, '']
