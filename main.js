@@ -359,7 +359,7 @@ module.exports = ".title {\n    color: #002868;\n    font-family: 'Libre Baskerv
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"title\">{{title}}</div>\n<div class=\"chart-wrap\">\n    <app-geo-chart [data]=\"data\" [config]=\"config\" [elementId]=\"elementId\"></app-geo-chart>\n</div>\n<div class=\"summary\" align=\"center\">Sujith has <b class=\"visited\">visited </b><label class=\"number\">19</label> states and D.C. and <b class=\"lived\">lived</b> in <label class=\"number\">2</label> states</div>"
+module.exports = "<div class=\"title\">{{title}}</div>\n<div class=\"chart-wrap\">\n    <app-geo-chart [data]=\"data\" [config]=\"config\" [elementId]=\"elementId\"></app-geo-chart>\n</div>\n<div class=\"summary\" align=\"center\">Sujith has <b class=\"visited\">visited </b><label class=\"number\">19</label> states and D.C. and <b class=\"lived\">lived</b> in <label class=\"number\">3</label> states</div>"
 
 /***/ }),
 
